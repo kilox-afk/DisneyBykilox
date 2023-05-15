@@ -1,0 +1,407 @@
+html {
+    background-color: #040714;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 1px;
+}
+
+/*Format Tablette ------------------------------------------------------------------------------------------- Format Tablette*/
+@media (max-width: 1025px) and (min-width:770px) {
+
+    /* ----------------- classes pour arranger texte image lien au niveau mise en forme -----------------------*/
+    img {
+        background-size: cover;
+        /*L'image prend toutes la place*/
+        height: 100%;
+        width: 100%;
+    }
+
+    .police1 {
+        color: aliceblue;
+        background: #04071400;
+        font-size: 32px;
+        /*Taille du texte*/
+        font-weight: 600;
+        /*L'épaisseur du texte*/
+        font-family: 'police1';
+        src: url(/css/Avenir-Heavy.ttf)
+    }
+
+    .police2 {
+        color: rgb(227, 227, 227);
+        background: #04071400;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'police2';
+        src: url(/css/Avenir-Roman.ttf)
+    }
+
+    .police3 {
+        color: rgb(186, 186, 186);
+        background: #04071400;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'police2';
+        src: url(/css/Avenir-Roman.ttf)
+    }
+
+    .police4 {
+        color: rgb(154, 154, 154);
+        background: #04071400;
+        font-size: 10px;
+        font-weight: 400;
+        font-family: 'police2';
+        src: url(/css/Avenir-Roman.ttf)
+    }
+
+    .txtcenter {
+        text-align: center;
+    }
+
+    a {
+        color: white;
+    }
+
+    .-souligne_a {
+        text-decoration: none;
+        /*Enlever le surlignage et le changement de couleur pour les liens*/
+    }
+
+    .saut {
+        margin-top: 150px;
+    }
+
+    /* -------------------------------------------------------------------------- BLOC 1 / 2 --------------------------------------------------------------------*/
+
+    #id_div_img {
+        position: relative;
+        display: inline-block;
+        /*Prend un espace restrict*/
+    }
+
+    #id_div_img img {
+        vertical-align: middle;
+        /*Alignement vertical centrer*/
+    }
+
+    #id_div_img .div_bloc p {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .div_bloc {
+        position: relative;
+        top: 60%;
+        left: 40%;
+        /*repositionner en X, Y lorsqu'il est déjà positionné avec absolute*/
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        width: 80%;
+        left: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-top: -350px;
+        margin-bottom: 50px;
+    }
+
+    .div_bloc2 {
+        position: relative;
+        /* top: 60%; */
+        /* left: 40%; */
+        /*repositionner en X, Y lorsqu'il est déjà positionné avec absolute*/
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        width: 50%;
+        left: 10%;
+        display: flex;
+        /*! justify-content: center; */
+        /*! align-items: center; */
+        /*! text-align: center; */
+        flex-direction: column;
+        margin-top: -400px;
+        margin-bottom: 50px;
+    }
+
+    input[type="email"] {
+        width: 65%;
+        /* la largeur */
+        height: 40px;
+        /* la hauteur */
+        background-color: #3d3d3d;
+        color: rgb(45, 45, 45);
+        padding: 5px;
+        /* Ajoute un espace intérieur pour le texte */
+        border: 0px solid;
+        border-radius: 5px 0px 0px 5px;
+        /* haut gauche / haut droit / bas droit / bas gauche */
+    }
+
+    input[type="email"]::placeholder {
+        color: white;
+        /* Définit la couleur du texte de l'indicateur de saisie en blanc */
+    }
+
+    #disneylogo {
+        margin-top: 250px;
+        width: 35%;
+        height: 35%;
+    }
+
+    .btn_continuer {
+        background-color: #0063e5;
+        border-radius: 0px 5px 5px 0px;
+        border: 0px solid;
+        font-size: 20px;
+        color: white;
+        width: 30%;
+        height: 50px;
+        margin-left: -10px;
+        padding-bottom: 3px;
+        cursor: pointer;
+        /*curseur en mode cliquable visuellement*/
+    }
+
+    .p_email {
+        width: 100%;
+    }
+
+    .btn_identifier {
+        position: fixed;
+        /*fixer la position lors d'un scroll*/
+        top: 15px;
+        right: 40px;
+        background-color: #040714;
+        color: white;
+        padding: 10px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 5px 5px 5px 5px;
+        border: 1px solid;
+        /* solid = bordure pleine */
+        z-index: 3;
+        /*Mettre en priorité au niveau de la super position*/
+    }
+
+    .btn_inscrire {
+        background-color: #0063e5;
+        border-radius: 5px 5px 5px 5px;
+        border: 0px solid;
+        font-size: 20px;
+        color: white;
+        position: fixed;
+        top: 15px;
+        right: 215px;
+        cursor: pointer;
+        z-index: 3;
+        padding: 11px 15px;
+        font-size: 20px;
+    }
+
+    .topbar {
+        width: 100%;
+        height: 5em;
+        position: fixed;
+        background-color: #040714;
+        z-index: 2;
+        animation: fade-in 2s;
+        /*L'animation dure progressivement 2s*/
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .topbar img {
+        vertical-align: middle;
+        width: 80px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 60px;
+        z-index: 3;
+    }
+
+    .visible {
+        opacity: 1;
+    }
+
+    .fleche_mouv {
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        color: white;
+        cursor: pointer;
+        animation: rebondissement 0.5s infinite alternate;
+    }
+
+    @keyframes rebondissement {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* ------------------------------------------------------------------------------- BLOC 3 --------------------------------------------------------------------*/
+    .lkenobi {
+        margin-left: 5.5%;
+        width: 89%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    #triologo {
+        display: flex;
+        flex-wrap: wrap;
+        /*Permet de s'organiser sur plusieurs lignes si nécessaire (quand ca dépasse)*/
+        justify-content: space-between;
+        /*répartir de manière égal le contenu*/
+    }
+
+    .trio {
+        flex-basis: calc(30% - 20px);
+        /*Pour spécifier leur largeur de 33% avec 20px de marge (entre elles)*/
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    /* ------------------------------------------------------------------------------- BLOC 4 --------------------------------------------------------------------*/
+    #container_liste_d {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .div-cliquable {
+        background-color: #13151d;
+        padding: 25px;
+        margin-bottom: 15px;
+        height: 30px;
+    }
+
+    .div-cachee {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        /* permet de masquer lors que le contenu dépasse la condition au dessus */
+        transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+        /*ease-in-out permet une accéleration début et fin et ralentit au milieu*/
+    }
+
+    .div-affichee {
+        background-color: #13151d;
+        opacity: 1;
+        max-height: 1000px;
+        /* Ajustez cette valeur en fonction de vos besoins */
+        overflow: visible;
+        transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+        margin-top: -15px;
+        margin-bottom: 15px;
+        line-height: 30px;
+        /* Espacer entre les lignes*/
+        padding-left: 10px;
+    }
+
+    #spanplus, #spanplus1, #spanplus2, #spanplus3, #spanplus4, #spanplus5 {
+        float: right;
+        /* mettre l'élément à droite de l'élément parent */
+        font-size: 45px;
+        margin-top: -30px;
+    }
+
+    /* ------------------------------------------------------------------------------- BLOC 5 --------------------------------------------------------------------*/
+
+    #quadralogo {
+        display: flex;
+        flex-wrap: wrap;
+        /*Permet de s'organiser sur plusieurs lignes si nécessaire (quand ca dépasse)*/
+        justify-content: space-between;
+        /*répartir de manière égal le contenu*/
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .quadra {
+        flex-basis: calc(25% - 10px);
+        /*Pour spécifier leur largeur de 25 avec 10px de marge (entre elles)*/
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* ------------------------------------------------------------------------------- BLOC 6 --------------------------------------------------------------------*/
+    .imgB6 {
+        vertical-align: middle;
+        width: 80px;
+        height: 40px;
+        z-index: 3;
+        margin-top: -100px;
+    }
+
+    #container_B6 {
+        margin-left: 22.5%;
+        width: 55%;
+        text-align: center;
+    }
+
+
+    .-souligne_a.police4 {
+        justify-content: space-between;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    footer label {
+        position: relative;
+    }
+
+    .globe {
+        height: 20px;
+        width: 20px;
+        margin-right: -20px;
+        margin-bottom: -5px;
+    }
+
+    footer label .globe {
+        filter: invert(1);
+        /* inverse les couleurs sombre > clair et vis versa */
+        opacity: 0.5;
+    }
+
+    footer select {
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 10px;
+        color: rgb(205, 205, 205);
+        border: none;
+        cursor: pointer;
+        padding: 5px 17px;
+        width: 80px;
+    }
+
+    footer select option {
+        color: rgb(73, 73, 73);
+        width: 75px;
+        cursor: pointer;
+    }
+}
